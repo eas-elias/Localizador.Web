@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script src="~/Scripts/Site.js"></script>
+
+<br />
+<br />
+<br />
+<div id="divConteudoEsquerda">
+    <div id="mapaDoGoogle">
+
+
+
+    </div>
+
+    <br />
+    <div id="divUsuarios">
+
+    </div>
+
+</div>
+
+<div id="divConteudoBusca">
+    <h5>
+        <strong>Minha latitude atual</strong>
+    </h5>
+    <div>
+        <input id="latitudeOrigem" placeholder="Informe o endereço" type="text" value="-23.558287" />
+    </div>
+
+    <h5>
+        <strong>Minha longitude atual</strong>
+    </h5>
+    <div>
+        <input id="longitudeOrigem" placeholder="Informe o endereço" type="text" value="-46.637079" />
+    </div>
+
+    <h5>
+        <strong>Meu nome de usuário</strong>
+    </h5>
+    <div>
+        <input id="txtUsuario" placeholder="Informe o seu usuário" type="text" value="JOÃO" />
+    </div>
+    <br>
+    <div>
+        <input type='button' value="Buscar Amigos Proximos" onclick="calcularDistanciaAmigos(null)" />
+    </div>
+    <br>
+    <div>
+        <strong>Distância: </strong>
+    </div>
+    <div id="divResultado"></div>
+
+</div>
+
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=calcularDistancia">
+</script>
+
